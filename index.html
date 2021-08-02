@@ -9,6 +9,17 @@
 	</head>
 	<body class="is-preload">
 
+		<!-- LOADER -->
+        <div id="preloader">
+            <div class="body" id="appLoader">
+              <div class="Box">
+                <img src="images/favicon.ico" alt="" />
+                <span></span>
+              </div>
+            </div>
+        </div>
+        <!-- END LOADER --> 
+
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
@@ -445,6 +456,16 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+		        $(document).ready(function() {
+		           window.setTimeout("fadeMyDiv();", 3000); //call fade in 3 seconds
+		         }
+		        )
+
+		        function fadeMyDiv() {
+		           $("#preloader").fadeOut('slow');
+		        }
+		    </script>
 
 	</body>
 </html>
